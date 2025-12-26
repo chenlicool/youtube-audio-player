@@ -1,0 +1,26 @@
+{
+  "name": "youtube-audio-player",
+  "version": "1.0.0",
+  "description": "YouTube音频播放器 - 一体化解决方案",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "install-deps": "npm install && echo '请确保已安装: yt-dlp (pip install yt-dlp) 或 youtube-dl'"
+  },
+  "keywords": [
+    "youtube",
+    "audio",
+    "player",
+    "webgl"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "multer": "^1.4.5-lts.1",
+    "fluent-ffmpeg": "^2.1.2"
+  },
+  "devDependencies": {}
+}
+

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube音频播放器</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+    <!-- 顶部导航 -->
+    <header class="header">
+        <div class="header-content">
+            <div class="header-left">
+                <h1 class="logo">音频播放器</h1>
+                <nav class="nav">
+                    <a href="#" class="nav-link active" data-tab="library">音频库</a>
+                    <a href="#" class="nav-link" data-tab="playlists">播放列表</a>
+                </nav>
+            </div>
+            <div class="header-right">
+                <div class="convert-box">
+                    <input 
+                        type="text" 
+                        id="youtubeUrl" 
+                        class="url-input" 
+                        placeholder="输入YouTube URL..."
+                    >
+                    <input 
+                        type="text" 
+                        id="categoryInput" 
+                        class="category-input" 
+                        placeholder="分类..."
+                    >
+                    <button id="convertBtn" class="convert-btn">
+                        转换
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 进度显示 -->
+    <div id="progressSection" class="progress-section hidden">
+        <div class="progress-bar-wrapper">
+            <div class="progress-bar-bg">
+                <div id="progressBar" class="progress-bar"></div>
+            </div>
+            <span id="progressText" class="progress-text">0%</span>
+        </div>
+    </div>
+
+    <!-- 主内容区域 -->
+    <main class="main-content">
+        <!-- 左侧：当前播放区域 -->
+        <div class="left-panel">
+            <div id="playerSection" class="player-section">
+                <div class="vinyl-player-container">
+                    <div class="vinyl-record" id="vinylRecord">
+                        <div class="record-grooves"></div>
+                        <div class="record-center">
+                            <div class="center-label" id="centerLabel">
+                                <div class="label-image" id="labelImage">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+                                    </svg>
+                                </div>
+                                <div class="center-hole"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tonearm-container">
+                        <div class="tonearm-pivot"></div>
+                        <div class="tonearm" id="tonearm">
+                            <div class="tonearm-head">
+                                <div class="stylus"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="player-info">
+                    <h2 id="audioTitle" class="player-title">选择音频开始播放</h2>
+                    <div class="player-meta">
+                        <span id="audioCategory" class="category-tag"></span>
+                        <span id="audioDuration" class="duration">00:00</span>
+                    </div>
+                    <div class="player-controls-main">
+                        <button id="playPauseBtn" class="play-btn">
+                            <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </button>
+                        <div class="seek-container-main">
+                            <input 
+                                type="range" 
+                                id="seekBar" 
+                                class="seek-bar-main" 
+                                min="0" 
+                                max="100" 
+                                value="0"
+                            >
+                            <div class="time-display-main">
+                                <span id="currentTime">00:00</span>
+                                <span id="totalTime">00:00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="player-actions">
+                        <button id="downloadBtn" class="action-btn">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 12v7H5v-7H3v7c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zm-6 .67l2.59-2.58L17 11.5l-5 5-5-5 1.41-1.41L11 12.67V3h2z"/>
+                            </svg>
+                            下载
+                        </button>
+                        <div class="volume-control">
+                            <svg class="volume-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/>
+                            </svg>
+                            <input 
+                                type="range" 
+                                id="volumeBar" 
+                                class="volume-bar" 
+                                min="0" 
+                                max="100" 
+                                value="100"
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- WebGL可视化 -->
+            <canvas id="webglCanvas" class="webgl-canvas hidden"></canvas>
+        </div>
+
+        <!-- 右侧：音频列表 -->
+        <div class="right-panel">
+            <div class="panel-header">
+                <h2 class="panel-title">音频列表</h2>
+                <div class="filter-controls">
+                    <select id="categoryFilter" class="filter-select">
+                        <option value="全部">全部分类</option>
+                    </select>
+                    <select id="sortBy" class="filter-select">
+                        <option value="createdAt">时间</option>
+                        <option value="title">标题</option>
+                        <option value="duration">时长</option>
+                    </select>
+                    <select id="sortOrder" class="filter-select">
+                        <option value="desc">↓</option>
+                        <option value="asc">↑</option>
+                    </select>
+                </div>
+            </div>
+            <div id="audioList" class="track-list">
+                <div class="empty-state">
+                    <p>暂无音频</p>
+                    <p class="empty-hint">输入YouTube URL开始转换</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 播放列表面板 -->
+    <div id="playlistsTab" class="playlists-tab hidden">
+        <div class="playlists-header">
+            <h2>播放列表</h2>
+            <button id="createPlaylistBtn" class="create-btn">
+                + 新建播放列表
+            </button>
+        </div>
+        <div id="playlistList" class="playlists-grid"></div>
+    </div>
+
+    <audio id="audioPlayer" preload="metadata"></audio>
+    </div>
+    
+    <script src="webgl-visualizer.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

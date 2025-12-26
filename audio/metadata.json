@@ -1,0 +1,101 @@
+{
+  "audios": [
+    {
+      "id": "9j2ANI_2iNo_1766739670521",
+      "videoId": "9j2ANI_2iNo",
+      "title": "251130 BECKY REBECCA - Dream｜B NEW ERA - BECKY HAPPY BIRTHDAY CONCERT",
+      "filename": "251130 BECKY REBECCA - DreamB NEW ERA - BECKY HAPP_9j2ANI_2iNo_1766739670521.mp3",
+      "url": "https://youtu.be/9j2ANI_2iNo",
+      "category": "B NEW ERA",
+      "duration": 360,
+      "fileSize": 8641830,
+      "createdAt": "2025-12-26T09:01:25.505Z",
+      "thumbnail": "https://i.ytimg.com/vi_webp/9j2ANI_2iNo/maxresdefault.webp"
+    },
+    {
+      "id": "MS0olFp2cUc_1766739851031",
+      "videoId": "MS0olFp2cUc",
+      "title": "251130 BECKY REBECCA - ติดเธอซะก่อน (Sweet Baby)｜B NEW ERA - BECKY HAPPY BIRTHDAY CONCERT",
+      "filename": "251130 BECKY REBECCA -  Sweet BabyB NEW ERA - BECK_MS0olFp2cUc_1766739851031.mp3",
+      "url": "https://youtu.be/MS0olFp2cUc",
+      "category": "B NEW ERA",
+      "duration": 180,
+      "fileSize": 4322848,
+      "createdAt": "2025-12-26T09:04:21.275Z",
+      "thumbnail": "https://i.ytimg.com/vi_webp/MS0olFp2cUc/maxresdefault.webp"
+    },
+    {
+      "id": "RQb8RaujgvI_1766740767852",
+      "videoId": "RQb8RaujgvI",
+      "title": "251130 BECKY REBECCA - Stay a little longer ｜B NEW ERA - BECKY HAPPY BIRTHDAY CONCERT",
+      "filename": "251130 BECKY REBECCA - Stay a little longer B NEW _RQb8RaujgvI_1766740767852.mp3",
+      "url": "https://youtu.be/RQb8RaujgvI",
+      "category": "B NEW ERA",
+      "duration": 243,
+      "fileSize": 5841921,
+      "createdAt": "2025-12-26T09:19:39.752Z",
+      "thumbnail": "https://i.ytimg.com/vi_webp/RQb8RaujgvI/maxresdefault.webp"
+    },
+    {
+      "id": "e3GVImGd9O0_1766743347874",
+      "videoId": "e3GVImGd9O0",
+      "title": "241208 BECKY REBECCA - 22｜Rebecca solo stage birthday concert \"Queen B\"",
+      "filename": "241208 BECKY REBECCA - 22Rebecca solo stage birthd_e3GVImGd9O0_1766743347874.mp3",
+      "url": "https://youtu.be/e3GVImGd9O0",
+      "category": "未分类",
+      "duration": 219,
+      "fileSize": 5249464,
+      "createdAt": "2025-12-26T10:03:55.362Z",
+      "thumbnail": "https://i.ytimg.com/vi_webp/e3GVImGd9O0/maxresdefault.webp"
+    },
+    {
+      "id": "0g_mIO7N5Uc_1766743460050",
+      "videoId": "0g_mIO7N5Uc",
+      "title": "Becky Rebecca - Smoke | Cover | B New Era Birthday Concert | 歌詞 lyrics",
+      "filename": "Becky Rebecca - Smoke  Cover  B New Era Birthday C_0g_mIO7N5Uc_1766743460050.mp3",
+      "url": "https://youtu.be/0g_mIO7N5Uc",
+      "category": "未分类",
+      "duration": 216,
+      "fileSize": 5189905,
+      "createdAt": "2025-12-26T10:04:33.171Z",
+      "thumbnail": "https://i.ytimg.com/vi/0g_mIO7N5Uc/sddefault.jpg?sqp=-oaymwEmCIAFEOAD8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGHIgSygsMA8=&rs=AOn4CLDo4_JSKyOZE3oO2VMt0cPJ1CozBA"
+    },
+    {
+      "id": "Y7iv84AEBpE_1766743887930",
+      "videoId": "Y7iv84AEBpE",
+      "title": "[4K]​ Sound Check​: Unstoppable+almost is never enough+stronger //BECKY BIRTHDAY CONCERT​ 30/11/2025",
+      "filename": "4K Sound Check Unstoppablealmost is never enoughst_Y7iv84AEBpE_1766743887930.mp3",
+      "url": "https://youtu.be/Y7iv84AEBpE",
+      "category": "未分类",
+      "duration": 356,
+      "fileSize": 8537758,
+      "createdAt": "2025-12-26T10:11:44.979Z",
+      "thumbnail": "https://i.ytimg.com/vi/Y7iv84AEBpE/maxresdefault.jpg"
+    },
+    {
+      "id": "2XUsyExrejg_1766748493322",
+      "videoId": "2XUsyExrejg",
+      "title": "Becky Rebecca - Look What You Made Me Do | Cover | B New Era Birthday Concert | 歌詞 lyrics",
+      "filename": "Becky Rebecca - Look What You Made Me Do  Cover  B_2XUsyExrejg_1766748493322.mp3",
+      "url": "https://www.youtube.com/watch?v=2XUsyExrejg",
+      "category": "未分类",
+      "duration": 197,
+      "fileSize": 4723462,
+      "createdAt": "2025-12-26T11:28:25.799Z",
+      "thumbnail": "https://i.ytimg.com/vi_webp/2XUsyExrejg/maxresdefault.webp"
+    }
+  ],
+  "playlists": [
+    {
+      "id": "playlist_1766741202875",
+      "name": "B NEW ERA",
+      "description": "B NEW ERA",
+      "audioIds": [
+        "RQb8RaujgvI_1766740767852",
+        "MS0olFp2cUc_1766739851031",
+        "9j2ANI_2iNo_1766739670521"
+      ],
+      "createdAt": "2025-12-26T09:26:42.875Z"
+    }
+  ]
+}
